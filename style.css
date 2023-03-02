@@ -1,0 +1,67 @@
+* {
+    background-color: #1B4790;
+}
+.wrapper {
+    margin: auto;
+    max-width: 800px;
+    margin-top: 50px;
+}
+
+.title_content {
+    text-align: center;
+    color: white;
+    font-family: Segoe UI;
+    size: 20px;
+    margin-bottom: 50px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+
+.logo {
+    text-align: center;
+}
+
+.logotxt1 {
+    color: white;
+    font-size: 4rem;
+    font-weight: 600;
+    font-family: Segoe UI;
+}
+
+.logotxt2 {
+    color: #F7941D;
+    font-size: 4rem;
+    font-family: Segoe UI;  
+}
+
+#input_field {
+    background-color: aliceblue;
+    border-radius: 16px;
+    height: 120px;
+    width: 610px;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+}
+
+#submit_button {
+    background-color: #111827;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+}
+
+
+/* remove it later */
+#input_field1 {
+    background-color: aliceblue;
+    border-radius: 16px;
+    height: auto;
+    width: 610px;
+    margin-top: 15px;
+    padding: 10px 15px;
+}
