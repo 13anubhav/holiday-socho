@@ -1,9 +1,11 @@
+
 <html>
     <head>
         <meta charset="UTF-8">
         <meta name="'viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./style.css">
-        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+
    
     </head>
     <body>
@@ -11,45 +13,55 @@
         <div class="wrapper">
         <div class="container">
             <div class="logo">
-                <span class="logotxt1">holiday</span><span class="logotxt2">Socho</span>
+                <span class="logotxt1">holiday</span><span class="logotxt2">socho</span> 
             </div>
             <div class="title_content">
-                <p>Plan your next vacation<br><br>
-                    Get detailed schedule for your chosen travel destination.<br>
+                <p>Leave the <span id="hindi">' सोचो '</span> part of vacaton planning to us<br><br> 
+                    Get destination recommmendation for places all around the India.<br>
                     (e.g 4-days schedule for visiting Manali)<br>
-                    Follow the example format | 10 days max
+                    <!-- <br> -->
+                    <!-- You can start the Conversation by Typing the Text Like  Hello Holiday Socho AI -->
+                    <!-- Follow the example format | 10 days max -->    
                 </p>
             </div>
             <div>
-                <textarea id="input_field" placeholder="Start typing here..."></textarea>
                 
+                <textarea id="input_field" placeholder="Start typing here... "></textarea>
             </div>
             <div>
                 <!-- <button id="submit_button">Run</button> -->
 
-                <button onclick="run()">Search</button> 
+                <button id="submit_button" onclick="run()">Search</button> 
        
             </div>
-            <div>
+            <div>  
                 <!-- <p id="Chat"></p> -->
 
                 <!-- document.getElementById("Chat"); -->
              
-
+ <!-- <i>Output willl appear here...<i>  -->
+    <!-- <p style="color:red;">Output willl appear here...</p> -->
+      
                 <textarea id="input_field1" placeholder="output willl appear here">
-                    
+Awesome Results will appear here... :)
                   
                 </textarea>
                  <script>document.getElementById("input_field1").innerHTML =res;</script> 
                <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script>
                  <!-- <button onclick="myFunction()">Copy text</button> -->
-                 <!-- <button onclick="pdf_wala()">Convert To PDF</button> -->
+                
                
                  
             </div>
-            <br>
-            <button onclick="myFunction()">Copy text</button>
+            
+            <p>
+            </p>
+            <!-- <button onclick="myFunction()">Copy text</button> -->
+            <button id="submit_button" onclick="myFunction()"> Copy text</button>
+            <p>       </p>
+            <button id ="pdf_submit_button" onclick="pdf_wala1()">Convert To PDF</button>
         </div>
+        <!-- <button id="submit_button" onclick="myFunction()">Copy text</button> -->
         </div>
 
 
