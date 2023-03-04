@@ -1,6 +1,26 @@
+
 * {
     background-color: #1B4790;
+    font-family: Segoe UI;
 }
+#submit_button {
+    background-color: #F7941D;
+    font-size: 16px;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    border: none;
+  }
+
+  #pdf_submit_button {
+    background-color: #f396e8;
+    font-size: 16px;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    border: none;
+  }
+
 .wrapper {
     margin: auto;
     max-width: 800px;
@@ -48,11 +68,22 @@
     padding: 10px 15px;
 }
 
-#submit_button {
+/* #submit_button {
     background-color: #111827;
     color: white;
     padding: 10px 25px;
     border-radius: 50px;
+} */
+
+
+
+#submit_button{
+    background-color: #F7941D;
+    font-size: 16px;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    border: none;
 }
 
 
