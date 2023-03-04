@@ -49,10 +49,156 @@ function myFunction() {
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// function pdf_wala() {
-//     var doc = new jsPDF()
-//     src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"
-//     //doc.text('Hello world!', 10, 10) 
-//     doc.text(cpy_txt, 10, 10) 
-//     doc.save('a4.pdf')
-//   }
+
+  function pdf_wala1 () {
+
+    
+    var text = document.getElementById("input_field1").value;
+   
+    // create a new PDF document
+  //  var doc = new jsPDF();  // -------------> Original
+
+
+//----------> 
+
+
+
+
+ // ---------------->YAHA PE WORD WRAP HO RAHA HAI <------------------
+ // It's the Time For Disco -2
+ // It's The Time For Disco....
+
+ var lMargin=15; //left margin in mm
+ var rMargin=15; //right margin in mm
+ var pdfInMM=210;  // width of A4 in mm
+
+ var doc = new jsPDF("p","mm","a4");
+
+        ///-----------------YAHA PE PDF FONT SET KAR SAKTE HAI-----------------------
+
+
+
+    //var lines = doc.splitTextToSize(text, doc.internal.pageSize.getWidth() - 20);
+
+
+   ///-----------------YAHA PE PDF FONT SET KAR SAKTE HAI-----------------------
+   //doc.setFont("courier", "bolditalic");
+   // doc.text("This is centred text.", 105, 80, null, null, "center");
+  // doc.text( " ", 20, 140, null, 10);  // "10 degrees rotated"
+   //doc.setFont("times", "normal");
+  // doc.setFont("courier", "bolditalic");
+  // doc.setFont("helvetica", "italic");
+   doc.setFont("Symbol", "normal");
+   
+    // add the text to the document
+    // doc.text( 10, 10, lines);
+   // doc.setFont("helvetica", "bold");
+
+
+   //---------------------> YAHA PAR RGB COLOR SET HOTA HAI --> QRIPYA SAMPARK KARE <--------------------------
+
+   doc.setTextColor(0, 0, 0); // sets font color to red (RGB value)
+    
+     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        
+        var lines =doc.splitTextToSize(text, (pdfInMM-lMargin-rMargin));
+	    doc.text(lMargin,20,lines);
+      
+	//doc.save('Generated.pdf');
+
+    
+
+   
+
+    //------------------------------YAHA PE PDF GENERATION KE TYPES HAI-------------------------------------------
+
+    // doc.text(20, 20, 'This is the default font.');
+
+    // doc.setFont("courier", "normal");
+    // doc.text("This is courier normal.", 20, 30);
+
+    // doc.setFont("times", "italic");
+    // doc.text("This is times italic.", 20, 40);
+
+    // doc.setFont("helvetica", "bold");
+    // doc.text("This is helvetica bold.", 20, 50);
+
+   //  doc.setFont("courier", "bolditalic");
+    // doc.text("This is courier bolditalic.", 20, 60);
+
+    // doc.setFont("times", "normal");
+    // doc.text("This is centred text.", 105, 80, null, null, "center");
+    // doc.text("And a little bit more underneath it.", 105, 90, null, null, "center");
+    // doc.text("This is right aligned text", 200, 100, null, null, "right");
+    // doc.text("And some more", 200, 110, null, null, "right");
+    // doc.text("Back to left", 20, 120);
+
+    // doc.text("10 degrees rotated", 20, 140, null, 10);
+    // doc.text("-10 degrees rotated", 20, 160, null, -10);
+
+
+     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    // save the document as a PDF file
+
+
+    //---------------------------- HAMARE YAHA IMAGE ADD KIYA ZATA HAI ---> QRIPYA SAMPARK KARE :)  -------> BEGINS
+
+   // var imgData = 'deva.png'
+
+    var imgUrl = 'https://i.ibb.co/KG8Vvf5/image16.jpg';
+   // <a href="https://ibb.co/sPXsYNg"><img src="https://i.ibb.co/KG8Vvf5/image16.jpg" alt="image16" border="0"></a>
+
+    var imgData;
+
+    // getImageData(imgUrl, function(dataUrl) {
+    //     // set the image data to the loaded data URL
+    //     imgData = dataUrl;
+      
+    //     // add the image to the document
+    //     doc.addImage(imgData, 'JPEG', 10, 10, 50, 50);
+      
+    //     // add text to the document
+    //     doc.text(z, 70, 30);
+      
+    //     // save the document
+    //    // doc.save('mydocument.pdf');
+    //     doc.save("Holiday-socho-ai.pdf");
+    //   });
+
+
+     //----------------------------
+    //  function getImageData(url, callback) {
+    //     var img = new Image();
+    //     img.onload = function() {
+    //       var canvas = document.createElement('canvas');
+    //       canvas.width = this.naturalWidth;
+    //       canvas.height = this.naturalHeight;
+    //       canvas.getContext('2d').drawImage(this, 0, 0);
+    //       var dataUrl = canvas.toDataURL('image/jpeg');
+    //       callback(dataUrl);
+    //     };
+    //     img.src = url;
+
+    ////---------------------------- HAMARE YAHA IMAGE ADD KIYA ZATA HAI ---> QRIPYA SAMPARK KARE :) --------> ENDS
+
+   doc.save("Holiday-socho-ai.pdf");
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+    // ------------------------------->HUM RUN BUTTON KA END HAI<----------------DON'T TOUCH ME :() 
+  }
+
+
+
